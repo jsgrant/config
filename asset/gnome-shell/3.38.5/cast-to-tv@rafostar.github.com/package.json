@@ -1,0 +1,45 @@
+{
+  "name": "cast-to-tv",
+  "description": "Cast files to Chromecast, web browser or media player app over local network.",
+  "main": "node_scripts/server.js",
+  "author": "Rafostar",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bowser": "^2.9.0",
+    "chromecast-controller": "^0.3.1",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "ffmpeg-extract": "^1.1.2",
+    "gettext-parser": "^3.1.0",
+    "internal-ip": "^4.3.0",
+    "multicast-scanner": "^2.2.1",
+    "node-gettext": "^2.0.0",
+    "plyr": "3.5.3",
+    "socket.io": "^2.3.0",
+    "ws": "^7.2.1"
+  },
+  "scripts": {
+    "install": "sh node_scripts/utils/install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafostar/gnome-shell-extension-cast-to-tv.git"
+  },
+  "keywords": [
+    "gnome-shell-extension",
+    "chromecast",
+    "media",
+    "video",
+    "stream",
+    "cast"
+  ],
+  "bugs": {
+    "url": "https://github.com/Rafostar/gnome-shell-extension-cast-to-tv/issues"
+  },
+  "homepage": "https://github.com/Rafostar/gnome-shell-extension-cast-to-tv",
+  "devDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
+  }
+}

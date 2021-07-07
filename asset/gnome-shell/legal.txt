@@ -1,0 +1,2 @@
+These Are Extensions (Sourced From 'https://extensions.gnome.org' &) Stored Here For Convenience And Not A Declarations Of Rights.
+All Rights Are Reserved By The Creators & The Licenses Are Under Their Specification, NOT Under What I've Set For This Repo  -- Look / Follow Accordingly.

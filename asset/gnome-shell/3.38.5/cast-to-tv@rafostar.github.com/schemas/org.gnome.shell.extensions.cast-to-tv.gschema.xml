@@ -1,0 +1,125 @@
+<schemalist gettext-domain="cast-to-tv">
+  <schema id="org.gnome.shell.extensions.cast-to-tv" path="/org/gnome/shell/extensions/cast-to-tv/">
+    <!-- Main -->
+    <key name="receiver-type" type="s">
+      <default>"chromecast"</default>
+      <summary>Device receiving media</summary>
+    </key>
+    <key name="ffmpeg-path" type="s">
+      <default>"/usr/bin/ffmpeg"</default>
+      <summary>Custom path to FFmpeg</summary>
+    </key>
+    <key name="ffprobe-path" type="s">
+      <default>"/usr/bin/ffprobe"</default>
+      <summary>Custom path to FFprobe</summary>
+    </key>
+    <key name="listening-port" type="i">
+      <default>4000</default>
+      <summary>Port used for incoming connections</summary>
+    </key>
+    <key name="internal-port" type="i">
+      <default>9200</default>
+      <summary>Port used for internal communication</summary>
+    </key>
+    <!-- Remote -->
+    <key name="remote-position" type="s">
+      <default>"right"</default>
+      <summary>Position of chromecast remote menu button</summary>
+    </key>
+    <key name="seek-time" type="i">
+      <default>10</default>
+      <summary>Time amount to skip when seeking</summary>
+    </key>
+    <key name="slideshow-time" type="i">
+      <default>30</default>
+      <summary>Time amount after which slideshow image changes</summary>
+    </key>
+    <key name="unified-slider" type="b">
+      <default>true</default>
+      <summary>Unify volume and progress sliders</summary>
+    </key>
+    <key name="remote-label" type="b">
+      <default>true</default>
+      <summary>Show label next to remote controller</summary>
+    </key>
+    <key name="remote-label-fn" type="b">
+      <default>false</default>
+      <summary>Show receiver friendly name as remote controller label</summary>
+    </key>
+    <key name="media-buttons-size" type="i">
+      <default>20</default>
+      <summary>Icon size for widget media control buttons</summary>
+    </key>
+    <key name="slider-icon-size" type="i">
+      <default>16</default>
+      <summary>Icon size for widget slider</summary>
+    </key>
+    <!-- Chromecast -->
+    <key name="chromecast-name" type="s">
+      <default>""</default>
+      <summary>Selected Chromecast device name</summary>
+    </key>
+    <key name="chromecast-subtitles" type="s">
+      <default>"{}"</default>
+      <summary>Custom Chromecast subtitles config</summary>
+    </key>
+    <key name="chromecast-devices" type="s">
+      <default>"[]"</default>
+      <summary>Scanned Chromecast devices list</summary>
+    </key>
+    <!-- Playercast -->
+    <key name="playercast-name" type="s">
+      <default>""</default>
+      <summary>Playercast device name</summary>
+    </key>
+    <!-- Encoder -->
+    <key name="video-acceleration" type="s">
+      <default>"none"</default>
+      <summary>Video streaming hardware acceleration</summary>
+    </key>
+    <key name="video-bitrate" type="d">
+      <default>5.0</default>
+      <summary>Media encoding video bitrate</summary>
+    </key>
+    <key name="burn-subtitles" type="b">
+      <default>false</default>
+      <summary>Burn subtitles into video during transcode</summary>
+    </key>
+    <!-- Extractor -->
+    <key name="extractor-reuse" type="b">
+      <default>true</default>
+      <summary>Enable reusing subtitles from extractor dir</summary>
+    </key>
+    <key name="extractor-dir" type="s">
+      <default>"/tmp"</default>
+      <summary>Extractor save folder</summary>
+    </key>
+    <key name="subs-preferred" type="s">
+      <default>"eng/English"</default>
+      <summary>Preferred subtitles language</summary>
+    </key>
+    <key name="subs-fallback" type="s">
+      <default>""</default>
+      <summary>Fallback subtitles language</summary>
+    </key>
+    <!-- Other -->
+    <key name="music-visualizer" type="b">
+      <default>false</default>
+      <summary>FFmpeg music visualizer</summary>
+    </key>
+    <key name="webplayer-subs" type="d">
+      <default>1.0</default>
+      <summary>Web player subtitles size</summary>
+    </key>
+    <!-- Service -->
+    <key name="service-wanted" type="b">
+      <default>false</default>
+      <summary>Remember last service state</summary>
+    </key>
+    <!-- Restore -->
+    <key name="last-transcode" type="i">
+      <default>0</default>
+      <summary>Restore previous transcode option in file chooser</summary>
+    </key>
+  </schema>
+</schemalist>

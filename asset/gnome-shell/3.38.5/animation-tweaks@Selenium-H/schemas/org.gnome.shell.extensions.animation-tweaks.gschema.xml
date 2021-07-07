@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Version 13.01
+=============
+
+Effect Format  [  |  S    Name     C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN  ]
+
+Read the effectParameters.txt File for details.
+
+-->
+
+<schemalist gettext-domain="gnome-shell-extensions">
+
+  <schema path="/org/gnome/shell/extensions/animation-tweaks/" id="org.gnome.shell.extensions.animation-tweaks">
+  
+    <!--  ====================================================================================   Actions - Open   ================================================================================================== -->
+
+    <key name="opening-effect" type="b">
+      <default>true</default>
+      <summary>Opening Effects [ for windows ]</summary>
+      <description>Opening effect animation switch</description>
+    </key>
+    
+    <key name="normal-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[                         
+        '|','F', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Normal Windows</summary>
+      <description>Animation settings for Normal Windows opening</description>
+    </key>
+    
+    <key name="dialog-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Fold Out Sideways',    '2',    '0.5',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '255',    '0.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Dialog Windows</summary>
+      <description>Animation settings for Dialog Windows opening</description>
+    </key>
+
+    <key name="modaldialog-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '1.0',    '0.0',    '-0.1',   '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Modal Dialog</summary>
+      <description>Animation settings for Modal Dialog Windows opening</description>
+    </key>    
+    
+    <key name="dropdownmenu-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','T', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Dropdown Menu</summary>
+      <description>Animation settings for Dropdown Menu opening</description>
+    </key>
+    
+    <key name="popupmenu-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','T', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Pop Up Menu</summary>
+      <description>Animation settings for Pop Up Menu opening</description>
+    </key>
+
+    <key name="combo-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','T', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Combo Box</summary>
+      <description>Animation settings for Combo Box opening</description>
+    </key>
+    
+    <key name="splashscreen-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','T', 'Zoom In',              '2',    '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '1',      '0',      '0.8',    '0.8',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC' 
+      ]</default>
+      <summary>Splash Screen</summary>
+      <description>Animation settings for Splash Screen opening</description>
+    </key>
+
+    <key name="tooltip-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','T', 'Slide Up',             '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Tooltips</summary>
+      <description>Animation settings for Tooltips opening</description>
+    </key>
+    
+    <key name="overrideother-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','T', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Overrides Others</summary>
+      <description>Animation settings for Overrides Others opening</description>
+    </key>
+    
+    <key name="notificationbanner-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Fade In',              '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '128',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Notification Banner</summary>
+      <description>Animation settings for Notification Banner opening</description>
+    </key>
+    
+    <key name="padosd-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Up',             '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'
+      ]</default>
+      <summary>Pad OSD</summary>
+      <description>Animation settings for Pad OSD opening</description>
+    </key>
+    
+    <key name="toppanelpopupmenu-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Top Panel Pop Up Menu</summary>
+      <description>Animation settings for Top Panel Pop up Menu opening</description>
+    </key>
+
+    <key name="desktoppopupmenu-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Desktop Pop Up Menu</summary>
+      <description>Animation settings for Desktop Pop up Menu opening</description>
+    </key>    
+
+    <key name="windowmenu-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Window Menu</summary>
+      <description>Animation settings for Window Menu opening</description>
+    </key>    
+
+    <key name="endsessiondialog-open" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Down',           '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '250',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Session Ending Dialogs</summary>
+      <description>Animation settings for Session Ending Dialogs opening</description>
+    </key>    
+
+    <!--  ==================================================================================  Actions - Close   =================================================================================================== -->
+    
+    <key name="closing-effect" type="b">
+      <default>false</default>
+      <summary>Closing Effects [ for windows ]</summary>
+      <description>Closing effect for windows animation switch</description>
+    </key>
+ 
+    <key name="normal-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Up',             '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Normal Windows</summary>
+      <description>Animation settings for Normal Windows closing</description>
+    </key>
+    
+    <key name="dialog-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Fold In Sideways',     '1',    '0.5',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '0.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'
+      ]</default>
+      <summary>Dialog Windows</summary>
+      <description>Animation settings for Dialog Windows closing</description>
+    </key>
+    
+    <key name="modaldialog-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Up',             '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '1.0',    '0.0',    '-0.1',   '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Modal Dialog</summary>
+      <description>Animation settings for Modal Dialog Windows closing</description>
+    </key>
+ 
+    <key name="notificationbanner-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Fade Out',             '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'
+      ]</default>
+      <summary>Notification Banner</summary>
+      <description>Animation settings for Notification Banner closing</description>
+    </key>
+       
+    <key name="padosd-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Up',             '1',    '0.0',    '1.0',    '0.0',    '0.0',    '0.0',    '300',    '0',    '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'
+      ]</default>
+      <summary>Pad OSD</summary>
+      <description>Animation settings for Pad OSD closing</description>
+    </key>    
+    
+    <key name="toppanelpopupmenu-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Up',             '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Top Panel Pop Up Menu</summary>
+      <description>Animation settings for Top Panel Pop Up Menu closing</description>
+    </key>     
+
+    <key name="desktoppopupmenu-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Up',             '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Desktop Pop Up Menu</summary>
+      <description>Animation settings for Desktop Pop Up Menu closing</description>
+    </key>     
+
+    <key name="windowmenu-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Up',             '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Window Menu</summary>
+      <description>Animation settings for Window Menu closing</description>
+    </key>     
+    
+    <key name="endsessiondialog-close" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Scale Up',             '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '0.7',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Session Ending Dialogs</summary>
+      <description>Animation settings for Session Ending Dialogs closing</description>
+    </key>     
+
+    <!--  ==================================================================================  Actions - Minimize  ================================================================================================== -->
+    
+    <key name="minimizing-effect" type="b">
+      <default>false</default>
+      <summary>Minimizing Effects</summary>
+      <description>Minimizing effect animation switch</description>
+    </key>
+    
+    <key name="normal-minimize" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Down',           '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Normal Windows</summary>
+      <description>Animation settings for Normal Windows minimizing</description>
+    </key>
+    
+    <key name="dialog-minimize" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Down',           '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Dialog Windows</summary>
+      <description>Animation settings for Dialog Windows minimizing</description>
+    </key>
+
+    <key name="modaldialog-minimize" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Down',           '1',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Modal Dialog</summary>
+      <description>Only provided so that shell does not crash if for any reason Modal Dialog Windows is minimzing</description>
+    </key>
+
+    <!--  ===========================================================================  Actions -  Uninimize  ======================================================================================================== -->
+    
+    <key name="unminimizing-effect" type="b">
+      <default>false</default>
+      <summary>Unminimizing Effects</summary>
+      <description>Unminimizing effect animation switch</description>
+    </key>
+    
+    <key name="normal-unminimize" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Up',             '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '-0.1',   '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Normal Windows</summary>
+      <description>Animation settings for Normal Windows unminimizing</description>
+    </key>
+
+    <key name="dialog-unminimize" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Up',             '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '-0.1',   '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'  
+      ]</default>
+      <summary>Dialog Windows</summary>
+      <description>Animation settings for Dialog Windows unminimzing</description>
+    </key>
+    
+    <key name="modaldialog-unminimize" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Slide Up',             '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '1',      '0',      '1.0',    '1.0',    '0.0',    '0.1',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '-0.1',   '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC' 
+      ]</default>
+      <summary>Modal Dialog</summary>
+      <description>Only provided so that shell does not crash if for any reason Modal Dialog Windows is unminimzing</description>
+    </key>
+
+    <!--  ============================================================================== Actions - Focus Window  ================================================================================================== -->
+
+    <key name="focussing-effect" type="b">
+      <default>false</default>
+      <summary>Focussing Effects </summary>
+      <description>Focussing effect animation switch</description>
+    </key>
+
+    <key name="normal-focus" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Inflate',              '2',    '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.02',   '1.02',   '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'                                        
+      ]</default>
+      <summary>Normal Windows </summary>
+      <description>Animation settings for Normal Windows focus</description>
+    </key>
+
+    <key name="dialog-focus" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Inflate',              '2',    '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.02',   '1.02',   '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'                                        
+      ]</default>
+      <summary>Dialog Windows</summary>
+      <description>Animation settings for Dialog Windows focus</description>
+    </key>
+    
+    <key name="modaldialog-focus" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Inflate',              '2',    '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.02',   '1.02',   '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Modal Dialog</summary>
+      <description>Animation settings for Modal Dialog Windows focus</description>
+    </key>
+
+    <!--  ==================================================================================  Actions - Defocus Window  ============================================================================================ -->
+
+    <key name="defocussing-effect" type="b">
+      <default>false</default>
+      <summary>Defocussing Effects</summary>
+      <description>Defocussing effect animation switch</description>
+    </key>
+
+    <key name="normal-defocus" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Deflate',              '2',    '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '0.97',   '0.97',   '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Normal Windows</summary>
+      <description>Animation settings for Normal Windows defocus</description>
+    </key>
+
+    <key name="dialog-defocus" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Deflate',              '2',    '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '0.97',   '0.97',   '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Dialog Windows</summary>
+      <description>Animation settings for Dialog Windows defocus</description>
+    </key>
+    
+    <key name="modaldialog-defocus" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Deflate',              '2',    '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '0.97',   '0.97',   '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.5',    '0.5',    '0.0',    '0.0',    '0.0',    '25',     '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_IN_CUBIC'
+      ]</default>
+      <summary>Modal Dialog</summary>
+      <description>Animation settings for Modal Dialog Windows defocus</description>
+    </key>
+
+    <!--  ===============================================================================  Actions - Dragging Window  ============================================================================================== -->
+
+    <key name="moving-effect" type="b">
+      <default>false</default>
+      <summary>Dragging Effects</summary>
+      <description>Starting to move effect animation switch</description>
+    </key>
+
+    <key name="normal-movestart" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Fade',                 '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '220',    '.9999',  '.9999',  '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC' 
+      ]</default>
+      <summary>Normal Windows </summary>
+      <description>Animation settings for Normal Windows start to move</description>
+    </key>
+
+    <key name="dialog-movestart" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Fade',                 '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '220',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'   
+      ]</default>
+      <summary>Dialog Windows</summary>
+      <description>Animation settings for Dialog Windows start to move</description>
+    </key>
+    
+    <key name="modaldialog-movestart" type="as">
+    <!-- |  S    Name                    C       PPX       PPY       CX        CY        DL        T         OP        SX        SY        PX        PY        TZ        RX        RY        RZ        TRN -->
+      <default>[
+        '|','F', 'Fade',                 '2',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '220',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC',
+                                                 '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '300',    '255',    '1.0',    '1.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    '0.0',    'EASE_OUT_CUBIC'      
+      ]</default>
+      <summary>Modal Dialog</summary>
+      <description>Animation settings for Modal Dialog Windows start to move</description>
+    </key>
+
+    <!--  ===================================================================================    Profiles - Apps    ================================================================================================= -->
+
+    <key name="use-application-profiles" type="b">
+      <default>false</default>
+      <summary>Application Profiles</summary>
+      <description>Application profiles status switch</description>
+    </key>
+
+    <key name="application-list" type="as">
+      <default>[
+      ]</default>
+      <summary>List of Applicaions for custom profiles</summary>
+      <description>List of Applicaions for custom profiles</description>
+    </key>
+    
+    <key name="name-list" type="as">
+      <default>[
+      ]</default>
+      <summary>List of Applicaions names for custom profiles</summary>
+      <description>List of Applicaions names for custom profiles</description>
+    </key>
+
+    <!--  ===================================================================================    Profiles - Extension   ============================================================================================= -->
+
+    <key name="profile-name" type="s">
+      <default>"Default"</default>
+      <summary>Extension Profile Currently In Use</summary>
+      <description>Extension Profile Currently In Use</description>
+    </key>
+
+    <!--  ==========================================================================================  Tweaks  ======================================================================================================= -->
+
+    <key name="wayland"   type="b">
+      <default>false</default>
+      <summary>Use the workaround for Wayland</summary>
+      <description>Settings If used under wayland</description>
+    </key> 
+
+    <key name="padosd-hide-timeout" type="i">
+      <default>1500</default>
+      <summary>Pad OSD hide timeout [ in ms ] </summary>
+      <description>Time for which Pad OSD is Shown</description>
+    </key>    
+        
+    <key name="disable-shortcut" type="as">
+      <default>
+        <![CDATA[['<Super>t']]]>
+      </default>
+      <summary>Shortcut key combiation to disable extension</summary>
+      <description>Shortcut key combiation to disable extension</description>
+    </key>
+
+    <key name="show-delay"   type="b">
+      <default>false</default>
+      <summary>Show delay time in preferences</summary>
+      <description>Show Delay Time in preferences</description>
+    </key>
+
+    <!--  =============================================================================   Extension Variables  =========================================================================================== -->
+
+    <key name="current-version" type="d">
+      <default>13</default>
+      <summary>Version of Current Extension</summary>
+      <description>Provided to ensure that extension is stopped incase of autoupdate from previous version to prevent unwanted effects</description>
+    </key>
+
+    <key name="current-profile-modified" type="b">
+      <default>false</default>
+      <summary>Signals the preferences to unlock save button</summary>
+      <description>Signals the preferences to unlock save button</description>
+    </key>
+
+    <key name="reload-signal" type="b">
+      <default>false</default>
+      <summary>Signals the extension to reload </summary>
+      <description>Signals the extension to reload</description>
+    </key>
+    
+    <key name="reload-profiles-signal" type="b">
+      <default>false</default>
+      <summary>Signals the extension to reload Application Profiles</summary>
+      <description>Signals the extension to reload Application Profiles</description>
+    </key>    
+    
+    </schema>
+    
+</schemalist>
+
+

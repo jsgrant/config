@@ -1,0 +1,8 @@
+Unless explicitly stated otherwise (see below regarding /asset); 
+All code / docs are under the MIT License & all multimedia is 
+under the CC-BY 4.0 License.
+
+Files in the /asset directory are often of various origin and 
+so in-general more legally ambiguous;  A 'legal.txt' file should 
+be in the toplevel of all subdirectories there, and should list
+specific licensing information for a given file and/or dir.
